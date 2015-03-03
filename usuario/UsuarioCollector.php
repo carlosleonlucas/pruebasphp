@@ -12,8 +12,8 @@ class UsuarioCollector extends Collector
     return $ObjUsuario;
   }
 
-  function createUsuario($nombre) {    
-    $insertrow = self::$db->insertRow("INSERT INTO clase.usuario (idusuario, nombre) VALUES (?, ?)", array(null, "{$nombre}"));
+  function createUsuario($nombre, $apellido) {    
+    $insertrow = self::$db->insertRow("INSERT INTO clase.usuario (idusuario, nombre, apellido) VALUES (?, ?, ?)", array(null, "{$nombre}","{$apellido}"));
   }  
 
   function readUsuarios() {
@@ -22,7 +22,7 @@ class UsuarioCollector extends Collector
     $arrayUsuario= array();        
    
     foreach ($rows as $c){
-      $aux = new Usuario($c{'idusuario'},$c{'nombre'});
+      $aux = new Usuario($c{'idusuario'},$c{'nombre'},$c{'apellido'});
       array_push($arrayUsuario, $aux);
     }
     return $arrayUsuario;        

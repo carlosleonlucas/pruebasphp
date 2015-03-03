@@ -5,9 +5,10 @@ class Usuario
     private $idUsuario;
     private $nombre;
     
-     function __construct($idUsuario, $nombre) {
+     function __construct($idUsuario, $nombre, $apellido) {
        $this->idUsuario = $idUsuario;
        $this->nombre = $nombre;
+	   $this->apellido = $apellido;
      }
     
      function setIdUsuario($idUsuario){
@@ -21,6 +22,12 @@ class Usuario
      } 
      function getNombre(){
        return $this->nombre;
+     } 
+	 function setApellido($apellido){
+       $this->apellido = $apellido;
+     } 
+     function getApellido(){
+       return $this->apellido;
      } 
 }
 

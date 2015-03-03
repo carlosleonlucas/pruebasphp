@@ -5,14 +5,15 @@
 <body>
 <div id="main">
 <?php
-$valor=$_POST["nombre"];
-//$valor="manuel";
-echo 'Hola ' . htmlspecialchars($valor) . '!';
+$nombre=$_POST["nombre"];
+$apellido=$_POST["apellido"];
+
+echo 'Hola ' . htmlspecialchars($nombre) . '!';
 
 include_once("UsuarioCollector.php");
 
 $UsuarioCollectorobj = new UsuarioCollector();
-$UsuarioCollectorobj->createUsuario($valor);
+$UsuarioCollectorobj->createUsuario($nombre, $apellido);
 
 echo "valor agregado </br>";
 ?>

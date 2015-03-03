@@ -9,6 +9,9 @@
 <p>
 Nombre: <input type="text" name="nombre" autofocus required />
 </p>
+<p>
+Apellido: <input type="text" name="apellido" />
+</p>
 <input type="submit" value="Submit!" />
 
 </form>
