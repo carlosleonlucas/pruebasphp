@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-03-2015 a las 03:40:39
+-- Tiempo de generación: 03-03-2015 a las 03:46:13
 -- Versión del servidor: 5.0.51b-community-nt-log
 -- Versión de PHP: 5.5.12
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `clase`
 --
+CREATE DATABASE IF NOT EXISTS `clase` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `clase`;
 
 -- --------------------------------------------------------
 
@@ -26,6 +28,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `usuario`
 --
 
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
   `idusuario` int(2) NOT NULL auto_increment,
   `nombre` varchar(45) NOT NULL,
